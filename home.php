@@ -105,6 +105,7 @@
 
 <div class="load-item hidden">
     <form method="post" enctype="multipart/form-data" class="load-form">
+        <input type="hidden" name="csrf" value="<?php echo $token; ?>">
         <input type="file" name="filename" class="select_file"><br>
         <button name="go" class="load-btn btn btn-success">Загрузить</button>
         <p class="warning-message"></p>

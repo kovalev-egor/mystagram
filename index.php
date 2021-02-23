@@ -1,4 +1,9 @@
-<?php session_start(); ?>
+<?php
+    session_start();
+
+    $salt = rand(0000, 9999);
+    $token = $salt . ':' . md5($salt . $_SESSION['secret']);
+    ?>
 <!doctype html>
 <html lang="ru">
 <head>
