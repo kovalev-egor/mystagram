@@ -1,8 +1,8 @@
 <?php
-    $email = filter_var(trim($_POST['email']), FILTER_SANITIZE_STRING);
-    $username = filter_var(trim($_POST['username']), FILTER_SANITIZE_STRING);
-    $fullName = filter_var(trim($_POST['fullName']), FILTER_SANITIZE_STRING);
-    $pass = filter_var(trim($_POST['pass']), FILTER_SANITIZE_STRING);
+    $email = mysqli_real_escape_string(filter_var(trim($_POST['email']), FILTER_SANITIZE_STRING));
+    $username = mysqli_real_escape_string(filter_var(trim($_POST['username']), FILTER_SANITIZE_STRING));
+    $fullName = mysqli_real_escape_string(filter_var(trim($_POST['fullName']), FILTER_SANITIZE_STRING));
+    $pass = mysqli_real_escape_string(filter_var(trim($_POST['pass']), FILTER_SANITIZE_STRING));
 
     require_once '../db.php';
 
